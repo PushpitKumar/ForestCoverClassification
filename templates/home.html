@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1">
+      <title>Forest Cover Classification</title>
+  </head>
+  <body background="{{url_for('static',filename='forest.jpg')}}">
+    <font color="black">
+    <center>
+      <h1>Classify Type of Forest Cover</h1>
+      <br/>
+      <form action="{{url_for('predict')}}" method="post">
+        <br/>
+        <label><b>Enter Elevation (Above MSL)</b></label>
+        <br/>
+        <input name="Elevation" id="Elevation", type="text", required="required"/>
+        <br/>
+        <br/>
+        <label><b>Enter Aspect (Degrees Azimuth)</b></label>
+        <br/>
+        <input name="Aspect" id="Aspect", type="text", required="required"/>
+        <br/>
+        <br/>
+        <label><b>Enter Slope (Degrees)</b></label>
+        <br/>
+        <input name="Slope" id="Slope", type="text", required="required"/>
+        <br/>
+        <br/>
+        <label><b>Enter Distance to Hydrology (Metres)</b></label>
+        <br/>
+        <input name="Distance_To_Hydrology" id="Distance_To_Hydrology", type="text", required="required"/>
+        <br/>
+        <br/>
+        <label><b>Enter Horizontal Distance to Roadways (Metres)</b></label>
+        <br/>
+        <input name="Horizontal_Distance_To_Roadways" id="Horizontal_Distance_To_Roadways", type="text", required="required"/>
+        <br/>
+        <br/>
+        <label><b>Enter Hillshade Index at Noon (0-255)</b></label>
+        <br/>
+        <input name="Hillshade_Noon" id="Hillshade_Noon", type="text", required="required"/>
+        <br/>
+        <br/>
+        <label><b>Enter Hillshade Index at 3pm (0-255)</b></label>
+        <br/>
+        <input name="Hillshade_3pm" id="Hillshade_3pm", type="text", required="required"/>
+        <br/>
+        <br/>
+        <label><b>Enter Horizontal Distance to Firepoints (Metres)</b></label>
+        <br/>
+        <input name="Horizontal_Distance_To_Fire_Points" id="Horizontal_Distance_To_Fire_Points", type="text", required="required"/>
+        <br/>
+        <br/>
+        <label><b>Enter Wilderness Area</b></label>
+        <br/>
+        <select name="Wilderness_Area" id="Wilderness_Area" required="required"/>
+          <option value="Rawah Wilderness Area">Rawah Wilderness Area</option>
+          <option value="Neota Wilderness Area">Neota Wilderness Area</option>
+          <option value="Comanche Peak Wilderness Area">Comanche Peak Wilderness Area</option>
+          <option value="Cache la Poudre Wilderness Area">Cache la Poudre Wilderness Area</option>
+        </select>
+        <br/>
+        <br/>
+        <label><b>Enter Soil Type</b></label>
+        <br/>
+        <select name="Soil_Type" id="Soil_Type" required="required"/>
+          <option value="Type1">Type1</option>
+          <option value="Type2">Type2</option>
+          <option value="Type3">Type3</option>
+          <option value="Type4">Type4</option>
+          <option value="Type5">Type5</option>
+          <option value="Type6">Type6</option>
+          <option value="Type9">Type9</option>
+          <option value="Type10">Type10</option>
+          <option value="Type11">Type11</option>
+          <option value="Type12">Type12</option>
+          <option value="Type13">Type13</option>
+          <option value="Type16">Type16</option>
+          <option value="Type17">Type17</option>
+          <option value="Type18">Type18</option>
+          <option value="Type19">Type19</option>
+          <option value="Type20">Type20</option>
+          <option value="Type22">Type22</option>
+          <option value="Type23">Type23</option>
+          <option value="Type24">Type24</option>
+          <option value="Type26">Type26</option>
+          <option value="Type27">Type27</option>
+          <option value="Type29">Type29</option>
+          <option value="Type30">Type30</option>
+          <option value="Type31">Type31</option>
+          <option value="Type32">Type32</option>
+          <option value="Type33">Type33</option>
+          <option value="Type34">Type34</option>
+          <option value="Type35">Type35</option>
+          <option value="Type38">Type38</option>
+          <option value="Type39">Type39</option>
+          <option value="Type40">Type40</option>
+        </select>
+        <br/>
+        <br/>
+        <input type="submit" value="Classifiy"/>
+        <br/>
+        <br/>
+        <h3><p style="color:white">{{prediction_text}}</p></h3>
+        <br/>
+        <br/>
+        <p style="color:white">@2021 Pushpit Kumar</p>
+      </form>
+    </center>
+  </body>
+</html>
