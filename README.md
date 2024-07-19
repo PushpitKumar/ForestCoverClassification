@@ -1,3 +1,5 @@
+# Forest Cover Classification
+
 ## Table of Contents
 * Overview/Problem Statement
 * Dataset
