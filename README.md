@@ -1,5 +1,3 @@
-<img width="941" alt="image" src="https://github.com/user-attachments/assets/ea56c0cb-6910-4620-97e3-29b60afcf8b0"># Rainfall-Prediction
-
 ## Table of Contents
 * Overview/Problem Statement
 * Dataset
